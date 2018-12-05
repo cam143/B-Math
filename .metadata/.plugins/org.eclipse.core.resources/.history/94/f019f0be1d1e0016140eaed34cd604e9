@@ -1,0 +1,122 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/battle"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    android:weightSum="4"
+     >
+
+    <RelativeLayout
+        android:layout_margin="5sp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        
+    <Switch
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:id="@+id/mSwitch"
+        android:textStyle="bold"
+        android:checked="true"
+        android:layout_width="wrap_content"
+        android:layout_height="50sp"
+        android:drawableLeft="@drawable/sound"
+        android:textColor="#FFB2B2" />
+        
+    <ImageView
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/visible_eye"
+        android:layout_width="50sp"
+    	android:layout_height="50sp"
+    	android:scaleType="fitXY"
+        android:src="@drawable/visible_eye" />
+
+    </RelativeLayout>
+
+	<LinearLayout
+	    android:layout_above="@+id/layout"
+	    android:layout_margin="5sp"
+	    android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="3" >
+
+    
+	<Button
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        android:id="@+id/btnStartGame1player"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="match_parent"
+        android:layout_height="30sp"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:text="START GAME - 1 PLAYER"
+        android:onClick="startGame1player"
+        android:background="@drawable/buttonshape"
+		/>
+	
+	<Button
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        android:id="@+id/btnStartGame2player"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="match_parent"
+        android:layout_height="30sp"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:text="START GAME - 2 PLAYER"
+        android:onClick="startGame2player"
+        android:background="@drawable/buttonshape"
+		/>
+	
+    <Button
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        android:id="@+id/btnFindMatch"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="match_parent"
+        android:layout_height="30sp"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:text="FIND MATCH"
+        android:onClick="findMatch"
+        android:background="@drawable/buttonshape"
+		/>
+    
+	</LinearLayout>
+
+	<LinearLayout
+	    android:id="@+id/layout"
+	    android:layout_alignParentBottom="true"
+	    android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    
+    	<TextView
+        	android:id="@+id/txtStatus"
+        	android:textStyle="bold"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="STATUS: Not Connected"
+        	android:textColor="#7EC0EE"
+        	android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    	<ProgressBar
+    	    android:layout_gravity="center"
+        	android:id="@+id/progressBar"
+        	style="?android:attr/progressBarStyleSmall"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_marginLeft="5dp" />
+        
+    </LinearLayout>
+	
+</RelativeLayout>
